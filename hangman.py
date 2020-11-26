@@ -353,7 +353,7 @@ if __name__ == "__main__":
 ###############
 
     ## Random choose of secret word
-    # secret_word = choose_word(wordlist)
+    secret_word = choose_word(wordlist)
 
     ## Input secret word from console
     # secret_word = input('?')
@@ -366,43 +366,44 @@ if __name__ == "__main__":
     # hangman(secret_word)
 
     ## Start hangman game with hints
-    # hangman_with_hints(secret_word)
+    hangman_with_hints(secret_word)
 
+    ## To escape DEV MENU
     # exit(0)
 
 ###############
 
     ## Ineractive testing cover:
 
-    while True:
-        print('///////////////////////////////////////')
-        print('DEV MODE MENU')
-        print('* To play hangman with random word without hints, enter "rd"'
-              '\n* To play hangman with random word and hints, enter "rh"'
-              '\n* To play hangman with your word without hints, enter "ed"'
-              '\n* To play hangman with your word and hints, enter "eh"'
-              '\n* To exit program, enter "b"')
-        users_change = input('Enter your change: ').lower()
-
-        if "b" in users_change:
-            break
-
-        print('///////////////////////////////////////')
-
-        change_correct = True
-
-        if "r" in users_change:
-            secret_word = choose_word(wordlist)
-        elif "e" in users_change:
-            secret_word = input('>>> Enter your word: ')
-        else:
-            change_correct = False
-            print('Error! Incorrect change')
-
-        if change_correct:
-            if "d" in users_change:
-                hangman(secret_word)
-            elif "h" in users_change:
-                hangman_with_hints(secret_word)
-            else:
-                print('Error! Incorrect change')
+#    while True:
+#        print('///////////////////////////////////////')
+#        print('DEV MODE MENU')
+#        print('* To play hangman with random word without hints, enter "rd"'
+#              '\n* To play hangman with random word and hints, enter "rh"'
+#              '\n* To play hangman with your word without hints, enter "ed"'
+#              '\n* To play hangman with your word and hints, enter "eh"'
+#              '\n* To exit program, enter "b"')
+#        users_change = input('Enter your change: ').lower()
+#
+#        if "b" in users_change:
+#            break
+#
+#        print('///////////////////////////////////////')
+#
+#        change_correct = True
+#
+#        if "r" in users_change:
+#            secret_word = choose_word(wordlist)
+#        elif "e" in users_change:
+#            secret_word = input('>>> Enter your word: ')
+#       else:
+#            change_correct = False
+#            print('Error! Incorrect change')
+#
+#        if change_correct:
+#            if "d" in users_change:
+#                hangman(secret_word)
+#            elif "h" in users_change:
+#                hangman_with_hints(secret_word)
+#            else:
+#                print('Error! Incorrect change')
